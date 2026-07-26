@@ -1,0 +1,12 @@
+[
+  {
+    "id": "0003",
+    "title": "Longest Substring Without Repeating Characters",
+    "slug": "longest-substring-without-repeating-characters",
+    "difficulty": "medium",
+    "language": "cpp",
+    "code": "class Solution {\npublic:\n    int lengthOfLongestSubstring(string s) {\n        unordered_map<char,int> last;\n        int l = 0, ans = 0;\n\n        for (int r = 0; r < s.size(); r++) {\n            if (last.count(s[r])) {\n                l = max(l, last[s[r]] + 1);\n            }\n        last[s[r]] = r;\n        ans = max(ans, r - l + 1);\n    }\n    return ans;\n    }\n};",
+    "insights": "## AI Insights & Optimizations\nFailed to generate insights after trying all available models and keys.\n\n## Interview Explanation\nFailed to generate explanation.",
+    "timestamp": "2026-07-26T15:16:20.882Z"
+  }
+]
